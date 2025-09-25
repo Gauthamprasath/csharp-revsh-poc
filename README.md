@@ -1,2 +1,1 @@
-# C# Reverse Shell POC
-C# Reverse Shell - AV Evasion
+# C# Reverse Shell AV Evasion POC
