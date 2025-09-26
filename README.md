@@ -2,7 +2,7 @@
 
 ## Update the LHOST and LPORT in the code
 - **Base64 encoded listener IP**: `MTkyLjE2OC41LjU=` → `192.168.5.5`
-- **Base64 encoded listening port**: `NDQ1NQ==` → `4455`
+- **Base64 encoded listener port**: `NDQ1NQ==` → `4455`
 
 ## Compile
 
