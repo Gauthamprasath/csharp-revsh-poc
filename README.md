@@ -18,12 +18,12 @@
 
 `shell.exe`
 
+---
 
-# Obfuscation Techniques Used in the C# Reverse Shell 
+## Obfuscation Techniques Used in the C# Reverse Shell 
 
 This reverse shell utilizes **dynamic string decoding** to bypass static Antivirus (AV) signature analysis. The payload hides sensitive strings on disk and reconstructs them at runtime.
 
----
 
 ## 1. LHOST/LPORT Obfuscation via Base64 Encoding
 
@@ -34,7 +34,7 @@ The listener's IP address and port are encoded using Base64. This prevents Antiv
 | `b_ip` (LHOST) | `MTkyLjE2OC41LjU=` | `192.168.5.5` | `Convert.FromBase64String` |
 | `b_port` (LPORT) | `NDQ1NQ==` | `4455` | `Convert.FromBase64String` |
 
----
+
 
 ## 2. Shell Command Obfuscation via String Reversal
 
@@ -44,7 +44,7 @@ The critical executable filename (`cmd.exe`) is hidden by reversing its characte
 | :--- | :--- | :--- | :--- |
 | `reversedCmd` | `exe.dmc` | `cmd.exe` | Custom `ReverseString` function (`s.Reverse().ToArray()`) |
 
----
+
 
 ## 3. Behavioral Techniques (Key to Detection)
 
